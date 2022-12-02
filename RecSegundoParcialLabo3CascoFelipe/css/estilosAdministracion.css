@@ -1,0 +1,95 @@
+header{
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  background-color: #cc0000;
+  align-items: center;
+  padding: 15px;
+}
+
+nav a{
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  height: 50px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+body h2{
+  text-align: center;
+}
+
+#imgEncabezado{
+  width: 100%;
+  max-height: 300px;
+}
+
+th {
+  color: black;
+  text-transform: capitalize;
+}
+
+thead{
+  background-color: #b0adad;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 600px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+form label,
+form input[type="radio"] {
+  font-weight: bold;
+  display: inline-block;
+}
+
+form label {
+  width: 90%;
+}
+
+form input[type="radio"] {
+  width: 50%;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 90%;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+#btnGuardar, #btnEliminar,#btnCancelar{
+  margin-top: 20px;
+  background-color: #7b7b7b;
+  color: white;
+  width: 100px;
+}
+
+#spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+

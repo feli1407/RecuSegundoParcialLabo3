@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segundo Parcial</title>
+    <script src="/js/app.js" type="module" defer></script>
+    <script src="/server/node_modules/bootstrap/dist/js/bootstrap.bundle.js" defer></script>
+    <link rel="stylesheet" href="/css/estilosAdministracion.css" />
+    <link rel="stylesheet" href="/server/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="logo">
+        <img src="/Assets/logoConcecionaria.jpeg" alt="logo Concecionaria" />
+      </div>
+      <nav>
+        <ul>
+          <a class="text-white" href="/html/index.html">Nosotros</a>
+          <a class="text-white" href="#">Anuncios</a>
+          <a class="text-white" href="#">Blog</a>
+          <a class="text-white" href="#">Contacto</a>
+        </ul>
+      </nav>
+    </header>
+    <h2>Administracion</h2>
+
+    <div id="slider">
+      <div id="contenedor">
+        <img src="/Assets/encabezado.jpg" alt="Auto encabezado" id="imgEncabezado">
+      </div>
+    </div>
+    
+
+    <form class="container">
+      <fieldset>
+        <legend>Informacion del anuncio</legend>
+
+        <div class="row justify-content-center">
+          <label for="txtTitulo">Titulo:</label>
+          <input type="text" name="titulo" id="txtTitulo" />
+          <small></small>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="form-check form-check-inline">
+            <label>Transaccion:</label>
+            <input type="radio" name="transaccion" id="Venta" checked />Venta
+            <input type="radio" name="transaccion" id="Alquiler" />Alquiler
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <label for="txtDescripcion">Descripcion:</label>
+          <input type="text" name="descripcion" id="txtDescripcion" />
+          <small></small>
+        </div>
+        
+        <div class="row justify-content-center">
+          <label for="numPrecio">Precio:</label>
+          <input type="number" name="precio" id="numPrecio" />
+          <small></small>
+        </div>
+
+        <div class="row justify-content-center">
+          <label for="numPuertas">Puertas:</label>
+          <input type="number" name="puertas" id="numPuertas" />
+          <small></small>
+        </div>
+        
+        <div class="row justify-content-center">
+          <label for="numKms">Kms:</label>
+         <input type="number" name="kms" id="numKms" />
+          <small></small>
+        </div>
+        
+        <div class="row justify-content-center">
+          <label for="numPotencia">Potencia:</label>
+          <input type="number" name="potencia" id="numPotencia" />
+          <small></small>
+        </div>
+      </fieldset>
+      <div class="row justify-content-center">
+        <input type="hidden" id="txtId"/>
+        <div class="col-2"><input type="submit" id="btnGuardar" value="Guardar" class="btn"/></div>
+        <div class="col-2"><input type="button" id="btnEliminar" value="Eliminar" class="btn"/></div>
+        <div class="col-2"><input type="button" id="btnCancelar" value="Cancelar" class="btn" /></div>
+      </div>
+    </form>
+
+    <div class="container">
+      <div class="mt-4 p-5 rounded" style="background-image: url('/Assets/fondo.jpg');">
+        <div class="containerFiltrar">
+          <label for="opFiltrarTransaccion">Filtrar Transaccion:</label>
+          <select name="transaccionFiltro" id="opFiltrarTransaccion">
+            <option value="N/A" selected>N/A</option>
+            <option value="Venta">Venta</option>
+            <option value="Alquiler">Alquiler</option>
+          </select>
+    
+          <label id="promedio">Seleccione una transaccion</label>
+        </div>
+      </div>
+    </div>
+    
+<div class="container">
+  <div class="seleccionarColumnas">
+    <input type="checkbox" id="titulo" name="titulo">
+    <label for="titulo">Titulo</label><br>
+    <input type="checkbox" id="transaccion" name="transaccion">
+    <label for="transaccion">Transaccion</label><br>
+    <input type="checkbox" id="descripcion" name="descripcion">
+    <label for="descripcion">Descripcion</label><br>
+    <input type="checkbox" id="precio" name="precio">
+    <label for="precio">Precio</label><br>
+    <input type="checkbox" id="cantPuertas" name="cantPuertas">
+    <label for="cantPuertas">Num Puertas</label><br>
+    <input type="checkbox" id="cantKms" name="cantKms">
+    <label for="cantKms">Num Kms</label><br>
+    <input type="checkbox" id="cantPotencia" name="cantPotencia">
+    <label for="cantPotencia">Potencia</label><br>
+</div>
+    
+</form>
+<div id="spinner"></div>
+    <div class="divTabla container"></div>
+    <script src="https://kit.fontawesome.com/5c789a9c95.js" crossorigin="anonymous"></script>
+  </body>
+</html>
